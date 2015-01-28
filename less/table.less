@@ -1,0 +1,92 @@
+/*
+ * adapt-table
+ * License - https://github.com/JeromeLam/adapt-table/blob/master/LICENSE
+ * Maintainers - Jerome Lam <jerome.lam@gmail.com>
+ *
+ * Integrated from handsontable (https://github.com/handsontable/handsontable/blob/8a00edbc992d2eb68fa929bd731b5269a4691e7d/src/css/handsontable.css).
+ */
+
+.table-component {
+  .table-widget {
+    margin: 10px 0px;
+
+    table, tbody, thead, td, th, div {
+      box-sizing: content-box;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+    }
+
+    table {
+      border-collapse: separate;
+      /*it must be separate, otherwise there are offset miscalculations in WebKit: http://stackoverflow.com/questions/2655987/border-collapse-differences-in-ff-and-webkit*/
+      /*this actually only changes appearance of user selection - does not make text unselectable
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      -ms-user-select: none;
+      /*user-select: none; /*no browser supports unprefixed version*/
+      border-spacing: 0;
+      margin: 0;
+      border-width: 0;
+      table-layout: fixed;
+      width: 100%;
+      outline-width: 0;
+      /* reset bootstrap table style. for more info see: https://github.com/handsontable/handsontable/issues/224 */
+      max-width: none;
+      max-height: none;
+    }
+
+    th, td {
+      border-right: 1px solid #CCC;
+      border-bottom: 1px solid #CCC;
+      height: 22px;
+      empty-cells: show;
+      line-height: 21px;
+      padding: 0 4px 0 4px;
+      /* top, bottom padding different than 0 is handled poorly by FF with HTML5 doctype */
+      background-color: #FFF;
+      vertical-align: top;
+      overflow: hidden;
+      outline-width: 0;
+      white-space: pre-line;
+      /* preserve new line character in cell */
+    }
+
+    th:last-child {
+      /*Foundation framework fix*/
+      border-right: 1px solid #CCC;
+      border-bottom: 1px solid #CCC;
+    }
+
+    th:first-child, td:first-child {
+      border-left: 1px solid #CCC;
+    }
+
+    tr:first-child {
+      th, td {
+        border-top: 1px solid #CCC;
+      }
+    }
+
+    thead tr:last-child th {
+      border-bottom-width: 0;
+    }
+
+    thead tr.lastChild th {
+      border-bottom-width: 0;
+    }
+
+    th {
+      background-color: #EEE;
+      color: #222;
+      text-align: center;
+      font-weight: normal;
+      white-space: nowrap;
+    }
+
+    thead th {
+      padding: 0;
+    }
+  }
+}

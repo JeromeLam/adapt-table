@@ -1,7 +1,50 @@
 {{! Maintainers - Jerome Lam}}
 <div class="component-inner table-inner">
     {{> component this}}
-    {{/if}}
     <div class="component-widget table-widget">
+      {{#if _table}}
+        {{#with _table}}
+          <table>
+            {{#if _head}}
+              {{#with _head}}
+                <thead>
+                  {{#each _rows}}
+                    <tr>
+                      {{#each this}}
+                        <th {{#if _classes}}class="{{{_classes}}}"{{/if}} {{#if _rowspan}}rowspan="{{{_rowspan}}}"{{/if}} {{#if _colspan}}colspan="{{{_colspan}}}"{{/if}}>
+                          {{~#if value~}}
+                            {{{value}}}
+                          {{~else~}}
+                            {{{this}}}
+                          {{~/if~}}
+                        </th>
+                      {{/each}}
+                    </tr>
+                  {{/each}}
+                </thead>
+              {{/with}}
+            {{/if}}
+            {{#if _body}}
+              {{#with _body}}
+                <tbody>
+                  {{#each _rows}}
+                    <tr>
+                      {{#each this}}
+                        <td {{#if _classes}}class="{{{_classes}}}"{{/if}} {{#if _rowspan}}rowspan="{{{_rowspan}}}"{{/if}} {{#if _colspan}}colspan="{{{_colspan}}}"{{/if}}>
+                          {{~#if value~}}
+                            {{{value}}}
+                          {{~else~}}
+                            {{{this}}}
+                          {{~/if~}}
+                        </td>
+                      {{/each}}
+                    </tr>
+                  {{/each}}
+                </tbody>
+              {{/with}}
+            {{/if}}
+          </table>
+        {{/with}}
+      {{/if}}
     </div>
 </div>
