@@ -15,7 +15,13 @@
                           {{~#if value~}}
                             {{{value}}}
                           {{~else~}}
-                            {{{this}}}
+                            {{~#ifObject this~}}
+                              <span class="error">
+                                Missing "value" attribute.
+                              </span>
+                            {{~else~}}
+                              {{{this}}}
+                            {{~/ifObject~}}
                           {{~/if~}}
                         </th>
                       {{/each}}
@@ -34,7 +40,13 @@
                           {{~#if value~}}
                             {{{value}}}
                           {{~else~}}
-                            {{{this}}}
+                            {{~#ifObject this~}}
+                              <span class="error">
+                                Missing "value" attribute.
+                              </span>
+                            {{~else~}}
+                              {{{this}}}
+                            {{~/ifObject~}}
                           {{~/if~}}
                         </td>
                       {{/each}}

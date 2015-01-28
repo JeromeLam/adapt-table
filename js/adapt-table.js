@@ -5,6 +5,17 @@
  */
 define(["coreViews/componentView", "coreJS/adapt"], function(ComponentView, Adapt) {
 
+    var Handlebars = require('handlebars');
+
+    // http://stackoverflow.com/a/19990215
+    Handlebars.registerHelper('ifObject', function(item, options) {
+        if (item.constructor && item.constructor === Object) {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    });
+
     var Table = ComponentView.extend({
 
         preRender: function() {
@@ -15,10 +26,10 @@ define(["coreViews/componentView", "coreJS/adapt"], function(ComponentView, Adap
         postRender: function() {
             console.log("rendering");
 
-            // IMPORTANT! 
+            // IMPORTANT!
             // Both of the following methods need to be called inside your view.
 
-            // Use this to set the model status to ready. 
+            // Use this to set the model status to ready.
             // It should be used when telling Adapt that this view is completely loaded.
             // This is sometimes used in conjunction with imageReady.
             this.setReadyStatus();
