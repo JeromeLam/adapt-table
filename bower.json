@@ -1,15 +1,16 @@
 {
-  "name": "adapt-contrib-componentName",
+  "name": "adapt-table",
   "version": "0.0.1",
-  "homepage": "https://github.com/adaptlearning/adapt-contrib-componentName",
+  "homepage": "https://github.com/JeromeLam/adapt-table",
   "authors": [
-    "Daryl Hedley <darylhedley@hotmail.com>"
+    "Jerome Lam <jerome.lam@gmail.com>"
   ],
-  "description": "Please enter a description about your component here. This is what will get shown when registered with the Adapt registry so make it good",
-  "main": "/js/adapt-contrib-componentName.js",
+  "description": "An Adapt Learning Framework component that generates an HTML table.",
+  "main": "/js/adapt-table.js",
   "keywords": [
     "adapt-plugin",
-    "adapt-component"
+    "adapt-component",
+	"adapt-table"
   ],
   "license": "GPLv3"
 }

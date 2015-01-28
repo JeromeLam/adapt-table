@@ -1,11 +1,11 @@
 /*
- * adapt-componentName
- * License - http://github.com/adaptlearning/adapt_framework/blob/master/LICENSE
- * Maintainers - Daryl Hedley <darylhedley@hotmail.com>
+ * adapt-table
+ * License - https://github.com/JeromeLam/adapt-table/blob/master/LICENSE
+ * Maintainers - Jerome Lam <jerome.lam@gmail.com>
  */
 define(["coreViews/componentView", "coreJS/adapt"], function(ComponentView, Adapt) {
 
-    var ComponentName = ComponentView.extend({
+    var Table = ComponentView.extend({
 
         preRender: function() {
             // Checks to see if the component should be reset on revisit
@@ -43,8 +43,8 @@ define(["coreViews/componentView", "coreJS/adapt"], function(ComponentView, Adap
 
     });
 
-    Adapt.register("componentName", ComponentName);
+    Adapt.register("table", Table);
 
-    return ComponentName;
+    return Table;
 
 });

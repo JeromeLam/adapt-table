@@ -8,11 +8,11 @@ define(['../libraries/AdaptMock.js', 'jquery', 'contextFactory'], function(Adapt
             });
         };
 
-    describe('A component ...', function() {
+    describe('A table component', function() {
 
         it('should register', function(done) {
             var context = createContext();
-            context(['coreJS/adapt', 'adapt-contrib-componentName'], function (Adapt, plugin) {
+            context(['coreJS/adapt', 'adapt-table'], function (Adapt, plugin) {
                 expect(Adapt.register.called).to.be(true);
                 done();
             });

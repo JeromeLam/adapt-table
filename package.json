@@ -1,19 +1,19 @@
 {
-  "name": "adapt-contrib-componentName",
+  "name": "adapt-table",
   "version": "0.0.1",
-  "description": "Description of your component",
+  "description": "An Adapt Learning Framework component that generates an HTML table.",
   "main": "",
   "scripts": {
     "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/adaptlearning/adapt-contrib-componentName.git"
+    "url": "git://github.com/JeromeLam/adapt-table.git"
   },
-  "author": "AdaptLearning",
+  "author": "Jerome Lam <jerome.lam@gmail.com>",
   "license": "GPL v3",
   "bugs": {
-    "url": "https://github.com/adaptlearning/adapt-contrib-componentName/issues"
+    "url": "https://github.com/JeromeLam/adapt-table/issues"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
