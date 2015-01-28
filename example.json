@@ -5,8 +5,54 @@
     "_component":"table",
     "_classes":"",
     "_layout":"left",
-    "title":"Our first look at a component",
-    "displayTitle":"Our first look at a component",
-    "body":"This component you're reading is a sample component. All components take this form of a title and body - except a blank component. However it's important to realise that title and body attributes are not needed. <br><br>Take for instance the media component opposite or below on a smaller device - has no body attribute. Instead of the HTML being rendered Adapt simply doesn't render it. The title attribute is simply a break tag to push the media component level with the opposite component.",
-    "instruction":""
+    "title":"Table component",
+    "displayTitle":"Table component",
+    "body":"This is an example for the table component. The \"_table\" attribute contains a section for \"_head\" and \"body\", and each of those contain \"_rows\" of cells. Each cell can be a single value, or it can be an object with additional optional attributes (_classes, _rowspan, _colspan, value).",
+    "instruction":"",
+    "_table": {
+      "_head": {
+        "_rows": [
+          [
+            {
+              "_classes": "table-head-main",
+              "_rowspan": "1",
+              "_colspan": "4",
+              "value": "Main Title"
+            }
+          ],
+          [
+            {
+              "_classes": "table-head-sub",
+              "_colspan": "2",
+              "value": "Sub-title 1"
+            },
+            {
+              "_classes": "table-head-sub",
+              "_colspan": "2",
+              "value": "Sub-title 2"
+            }
+          ]
+        ]
+      },
+      "_body": {
+        "_rows": [
+          [
+            "A 1-1",
+            {
+              "_rowspan": "2",
+              "value": "B 1-2"
+            },
+            "C 1-3",
+            "D 1-4"
+          ],
+          [
+            "A 2-1",
+            {
+              "_colspan": "2",
+              "value": "C 2-3"
+            }
+          ]
+        ]
+      }
+    }
 }
