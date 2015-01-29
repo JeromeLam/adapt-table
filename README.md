@@ -1,4 +1,4 @@
-#adapt-table
+#adapt-table [![Build Status](https://travis-ci.org/JeromeLam/adapt-table.svg?branch=master)](https://travis-ci.org/JeromeLam/adapt-table)
 
 An Adapt Learning Framework component that generates an HTML table.
 
